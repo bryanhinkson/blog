@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<head>
+	<title>Registration Form</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--<link href="CSS/main.css" type="text/css" rel="stylesheet">-->
+	
+	<style>
+		body {
+			background-color: darkslategray;
+		}
+		.dropdown-submenu {
+		    position:relative;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		    top:0;
+		    left:100%;
+		    margin-top:-6px;
+		    margin-left:-1px;
+		    -webkit-border-radius:0 6px 6px 6px;
+		    -moz-border-radius:0 6px 6px 6px;
+		    border-radius:0 6px 6px 6px;
+		}
+		.dropdown-submenu:hover>.dropdown-menu {
+		    display:block;
+		}
+		.dropdown-submenu>a:after {
+		    display:block;
+		    content:" ";
+		    float:right;
+		    width:0;
+		    height:0;
+		    border-color:transparent;
+		    border-style:solid;
+		    border-width:5px 0 5px 5px;
+		    border-left-color:#cccccc;
+		    margin-top:5px;
+		    margin-right:-10px;
+		}
+		.dropdown-submenu:hover>a:after {
+		    border-left-color:#ffffff;
+		}
+		.dropdown-submenu.pull-left {
+		    float:none;
+		}
+		.dropdown-submenu.pull-left>.dropdown-menu {
+		    left:-100%;
+		    margin-left:10px;
+		    -webkit-border-radius:6px 0 6px 6px;
+		    -moz-border-radius:6px 0 6px 6px;
+		    border-radius:6px 0 6px 6px;
+		}
+		
+		#content {
+			background-color: #eee;
+			margin-top: 50px;
+		}
+		
+		#navigation {
+			margin-left: 0px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<ul id="navigation" class="nav nav-tabs col-sm-12" >
+					<li class="dropdown" role="presentation">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							 Home<span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level">
+							<li>
+								<a href="#">People</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Managment</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">HR</a></li>
+									<li><a href="#">PR</a></li>
+									<li><a href="#">IT</a></li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu">
+								<a href="#">Activities</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">HR</a></li>
+									<li><a href="#">PR</a></li>
+									<li><a href="#">IT</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">History</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown" role="presentation">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						Contact Us<span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level">
+							<li>
+								<a href="#">People</a>
+							</li>
+							<li>
+								<a href="#">Managment</a>
+							</li>
+							<li>
+								<a href="#">Activities</a>
+							</li>
+							<li>
+								<a href="#">History</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown" role="presentation">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							About Us<span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level">
+							<li>
+								<a href="#">People</a>
+							</li>
+							<li>
+								<a href="#">Managment</a>
+							</li>
+							<li>
+								<a href="#">Activities</a>
+							</li>
+							<li>
+								<a href="#">History</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown" role="presentation">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						Gallery<span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level">
+							<li>
+								<a href="#">Activities</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown" role="presentation">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							Events<span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level">
+							<li>
+								<a href="#">A</a>
+							</li>
+							<li>
+								<a href="#">B</a>
+							</li>
+							<li>
+								<a href="#">C</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8" id="content">
+			<div>
+				<h1 class="content" style="text-align: center;;">Registration Form</h1>
+				<form class="form-horizontal" method="POST" action="Registration.html">
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="firstname">First Name</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" name="firstName" id="firstname">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="Lastname">Last Name</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" id="Lastname" name="lastName">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" for="email">Email</label>
+						<div class="col-sm-10">
+							<input class="form-control" type="text" id="email" name="email">
+						</div>
+					</div>
+					<div class="field">
+						<p>Date of birth:</p>
+						<select class="form-control" name="day">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+							<option>22</option>
+							<option>23</option>
+							<option>24</option>
+							<option>25</option>
+							<option>26</option>
+							<option>27</option>
+							<option>28</option>
+							<option>29</option>
+							<option>30</option>
+							<option>31</option>
+						</select>
+						<select class="form-control" name="month">
+							<option>January</option>
+							<option>Feburary</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+							<option>September</option>
+							<option>October</option>
+							<option>November</option>
+							<option>December</option>
+						</select>
+						<select class="form-control" name="year">
+							<option>2001</option>
+							<option>2002</option>
+							<option>2003</option>
+							<option>2004</option>
+							<option>2005</option>
+							<option>2006</option>
+							<option>2007</option>
+							<option>2008</option>
+							<option>2009</option>
+							<option>2010</option>
+							<option>2011</option>
+							<option>2012</option>
+							<option>2013</option>
+							<option>2014</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+							<option>2019</option>
+							<option>2020</option>
+							<option>2021</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+							<option>2026</option>
+							<option>2027</option>
+							<option>2028</option>
+							<option>2029</option>
+							<option>2030</option>
+							<option>2031</option>
+						</select>
+					</div>
+					<div class="field">
+						<br />
+						<p>Country:</p>
+						<select class="form-control" name="country">
+							<option>USA</option>
+							<option>UK</option>
+							<option>Germany</option>
+							<option>Ukraine</option>
+							<option>Russia</option>
+							<option>Australia</option>
+						</select>
+					</div>
+					<div class="radio">Gender
+						<label>
+							<input type="radio" name="gender" value="Male">Male</label>
+						<label>
+							<input type="radio" name="gender" value="Female">Female</label>
+					</div>
+					<div class="checkbox">
+						<p>Interested in:</p>
+						<label>
+							<input type="checkbox" name="interest" value="newsletter">Newsletter</label>
+						<label>
+							<input type="checkbox" name="interest" value="updates">Updates</label>
+						<label>
+							<input type="checkbox" name="interest" value="events">Events</label>
+					</div>
+					<div class="field">
+						<br />
+						<input class="btn btn-default" type="submit" name="submit" value="Complete Registration">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<!--<form oninput="result.value=parseInt(b.value)">
+				<input type="range" name="b" min="0" max="10" step="2" value="0" />
+				<output name="result" style=" color: white; border: solid white 2px; font-weight: bold; padding: 0px 5px 0px 5px;"></output>
+			</form>-->
+		</div>
+	</div>
+</body>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--<link href="CSS/main.css" type="text/css" rel="stylesheet">-->
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<style>
+			#Display {
+				background-color: rgb(238, 238, 238);
+			}
+			hr {
+				border-color: darkgray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<h1 class="page-header">Bookfinder APP using google bookfinder API</h1>
+			<nav>
+				<ul class="nav nav-tabs">
+					<li>
+						<a class="navbar-link" href="index.html">Home</a>
+					</li>
+					<li>
+						<a class="navbar-link" href="contact.html">Contact</a>
+					</li>
+					<li>
+						<a class="navbar-link" href="bookFinder.html">Book Finder</a>
+					</li>
+					<li>
+						<a class="navbar-link" href="aboutUs.html">About US</a>
+					</li>
+			</nav>
+			<div class="row">
+				<div id="leftContainer" class="col-xs-3 well" style="padding: 10px 50px;">
+					<form class="form-horizontal" method="post">
+						<div class="form-group ui-widget">
+							<label for="Title">Title</label>
+							<input id="Title" class="form-control" type="text">
+						</div>
+						<div class="form-group ui-widget">
+							<label for="Author">Author</label>
+							<input id="Author" class="form-control" type="text">
+						</div>
+						<div class="form-group">
+							<button id="submit" class="btn btn-success">Submit</button>
+						</div>
+						<div id="errorDisplay"></div>
+						<hr />
+						<!--Start Modal-->
+						<!-- Button trigger modal -->
+						<div class="form-group">
+							<button id="viewWishlist" type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">View Wishlist</button>
+						</div>
+						<div class="form-group">
+							<button id="clear" class="btn btn-danger">Clear Wish List</button>
+						</div>
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+										<h4 class="modal-title" id="myModalLabel">Wishlist</h4>
+									</div>
+									<div class="modal-body">
+										<div id="wishlistResults"></div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--End Modal-->
+				</div>
+				</form>
+				<div id="Display" class="col-xs-9"></div>
+			</div>
+		</div>
+		</div>
+		<script src="bookFinder.js"></script>
+	</body>
+
+</html>

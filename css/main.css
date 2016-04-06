@@ -1,0 +1,15 @@
+body {
+				font-size: 1.7em;
+			}
+			p {
+				text-indent: 40px;
+			}
+			.topMargin {
+				margin-top:25px;
+			}
+			.voice {
+				font-style: italic;
+			}
+			hr {
+				border-color: darkgray;
+			}

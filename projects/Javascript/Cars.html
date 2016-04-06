@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car</title>
+	</head>
+	<body>
+		<form>
+			<select id="select">
+				<option>Select an option</option>
+				<option>SUV</option>
+				<option>Sedan</option>
+				<option>Coupe</option>
+			</select>
+			<input id="Year" type="text" placeholder="Year" readonly="readonly">
+			<input id="Model" type="text" placeholder="Model" readonly="readonly">
+			<input id="Make" type="text" placeholder="Make" readonly="readonly">
+			<input id="carType" type="text" placeholder="Car Type" readonly="readonly">
+		</form>
+		<script>
+			function Car(year, model, make, carType) {
+			this.year = year;
+			this.model = model;
+			this.make = make;
+			this.carType = carType;
+		}
+		
+		var Pilot = new Car('2000', 'Pilot', 'Honda', 'SUV');
+		var Accord = new Car('2010', 'Accord', 'Honda', 'Sedan');
+		var BMW = new Car('1987', 'The Big One', 'BMW', 'Coupe');
+		
+			var el = document.getElementById('select');
+			
+			var Year = document.getElementById('Year');
+			var Model = document.getElementById('Model');        
+			var Make = document.getElementById('Make');           
+			var carType = document.getElementById('carType');      
+
+			el.addEventListener('change', function(){
+					if(el.value == 'SUV'){
+						Year.value = Pilot.year;  
+						Model.value = Pilot.model;
+						Make.value = Pilot.make;
+						carType.value = Pilot.carType;
+					}
+					else if(el.value == 'Sedan'){
+						Year.value = Accord.year;  
+						Model.value = Accord.model;
+						Make.value = Accord.make;
+						carType.value = Accord.carType;
+					}
+					else if(el.value == 'Coupe'){
+						Year.value = BMW.year;  
+						Model.value = BMW.model;
+						Make.value = BMW.make;
+						carType.value = BMW.carType;
+					}
+					else {
+						Year.value = '';  
+						Model.value = '';
+						Make.value = '';
+						carType.value = '';
+					}
+			}, false);
+		
+		
+		// if(!NaN){
+		// 	alert("if(!NaN) worked");
+		// }
+		
+		
+		</script>
+	</body>
+
+</html>

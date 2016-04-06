@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<title>Order Table</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--<link href="CSS/main.css" type="text/css" rel="stylesheet">-->
+</head>
+<body>
+	<div class="container">
+		<h1 class="page-header col-xs-offset-5">Orders</h1>
+		<div class="well">
+			<form class="form-inline" method="post" action="#">
+				<div class="form-group">
+					<label for="productNum">Product Number:</label>
+					<input id="productNum" class="form-control" type="number" placeholder="numbers only">
+				</div>
+				<div class="form-group">
+					<label for="description">Description:</label>
+					<input id="description" class="form-control" type="text">
+				</div>
+				<div class="form-group">
+					<label for="price">Price:</label>
+					<input id="price" class="form-control" type="number" placeholder="numbers only">
+				</div>
+				<div class="form-group">
+					<input type="submit" name="submit" value="Add">
+				</div>
+			</form>
+		</div>
+		<table id="table" class="table">
+			<tr>
+				<th></th>
+				<th>Order ID</th>
+				<th>Product #</th>
+				<th>Description</th>
+				<th>Price</th>
+			</tr>
+		</table>
+		<div class="well col-xs-offset-10">Total $<span id="Total"></span></div>
+	</div>
+	<script src="orders.js"></script>
+</body>

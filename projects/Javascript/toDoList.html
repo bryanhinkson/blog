@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To Do List</title>
+	</head>
+	<body>
+		<div id="addButton" type="button" value="Add"></div>
+		
+		<ol id="list">
+			
+		</ol>		
+		
+		<script>
+			function createButton(){
+			document.getElementById('addButton').innerHTML = '<input type="button" value="Add Item">'
+			}
+			
+			document.getElementById('addButton').addEventListener('load', createButton(), false);
+			
+			function addListItem(e){
+				var listItem = document.getElementById()
+			}
+			
+		var add = document.getElementById("addButton");
+		add.addEventListener('click', addItem, false);
+		
+		/*		add.addEventListener('click', function(e) {addItem(e);}, false);		*/
+		
+		var ListCount = 1;		
+		function addItem() {
+			var add = document.getElementById("list");
+			add.innerHTML = add.innerHTML + '<li id="' + ListCount +'">test ' + ListCount + ' </li>';
+			ListCount++;
+		}
+		
+		document.getElementById('list').addEventListener('click', removeItem, false);
+		
+		function removeItem(event){
+			var target = event.target;
+			var parent = target.parentNode;
+			if(target.nodeName=='LI'){
+				parent.removeChild(target);
+			}
+		}
+		
+		// To count the number of list items you can
+		// Go to parent element (UL) and then
+		// Go to first child
+		// var counter = 0;
+		// Go to next sibling; counter++
+		// Go to next sibling; counter++
+		// ...
+		// ...
+		// When there is not any more list items then nothing will be returned
+		// if statement to say when nothing is returned then counter is the number of list items
+		
+		
+		
+		</script>
+	</body>
+
+</html>

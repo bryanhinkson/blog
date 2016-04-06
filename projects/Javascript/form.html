@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--<link href="CSS/main.css" type="text/css" rel="stylesheet">-->
+		<style>
+			/*.notValid {
+				border-color: red;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1 class="col-xs-offset-5">Registration</h1>
+			</div>
+			<div class="row">
+				<div class="well col-xs-12">
+					<form class="form-horizontal" action="Cars.html" method="post">
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="firstName">First Name:</label>
+							<input class="col-xs-8" id="firstName" type="text" name="firstName">
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="middleI">Middle Initial:</label>
+							<input class="col-xs-8" id="middleI" type="text" name="middleI" maxlength="1">
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="lastName">Last Name:</label>
+							<input class="col-xs-8" id="lastName" type="text" name="lastName">
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="Month">Month</label>
+							<select class="col-xs-2" id="Month" name="Month">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<label class="col-xs-1 control-label" for="Day">Day</label>
+							<select class="col-xs-2" id="Day" name="Day">
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+							<label class="col-xs-1 control-label" for="Year">Year</label>
+							<select class="col-xs-2" id="Year" name="Year"></select>
+						</div>
+						<div class="radio">
+							<label class="col-xs-2 control-label" for="Male">
+								<input id="Male" type="radio" name="gender" value="Male">Male:</label>
+							<label class="col-xs-2 control-label" for="Female">
+								<input id="Female" type="radio" name="gender" value="Female">Female:</label>
+						</div>
+						<br />
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="School">School:</label>
+							<input class="col-xs-8" id="School" type="text" name="School">
+						</div>
+						<div class="form-group">
+							<label class="col-xs-2 control-label" for="Major">Major:</label>
+							<input class="col-xs-8" id="Major" type="text" name="Major">
+						</div>
+						<div class="form-group">
+							<input class="col-xs-4 col-xs-offset-4" id="Submit" type="submit" name="Submit" value="Show Details">
+						</div>
+						<div id="FormDetails">
+							<!--Content goes here-->
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			//----------This block is for form validation
+						
+						var element = document.getElementsByTagName('INPUT')
+						element[0].addEventListener('blur', makeRed, false);
+						element[1].addEventListener('blur', makeRed, false);
+						element[2].addEventListener('blur', makeRed, false);
+						element[5].addEventListener('blur', makeRed, false);
+						element[6].addEventListener('blur', makeRed, false);
+						
+						
+						function makeRed(e){
+							var target = e.target;
+							if(!target.value){
+								//target.setAttribute('class', 'col-xs-8 notValid');
+								target.setAttribute('style', 'border-color: red;');
+							}
+							else{
+								//target.setAttribute('class', 'col-xs-8');
+								target.setAttribute('style', '');
+							}
+						}
+			//-------------------------------------------			
+						
+			// ---------The following code populates the year field with years			
+			
+						document.getElementById('Year').addEventListener('load', loadYears(), false);
+						
+						function loadYears() {			    
+							for(i=20; i<=99; i++){
+							var node = document.createElement("OPTION");
+						    node.innerHTML = '<option value="19' + i + '">19' + i + '</option>';				
+						    document.getElementById("Year").appendChild(node);
+							}
+						}
+			//----------------------------------------------------------------
+			
+			//--------This block prevents the submit button from loading a new page
+			//--------And Then displays the content that was in the form
+			document.getElementById("Submit").addEventListener("click", displayContent, false);
+																		
+					function displayContent(event){
+						event.preventDefault();
+						
+						//Get the value that were submitted from the form and store them in variables
+						var firstName = document.getElementById('firstName').value;
+						var middleI = document.getElementById('middleI').value;
+						var lastName = document.getElementById('lastName').value;
+						var Month = document.getElementById('Month').value;
+						var Day = document.getElementById('Day').value;
+						var Year = document.getElementById('Year').value;
+						var Male = document.getElementById('Male').value;
+						var Female = document.getElementById('Female').value;
+						var School = document.getElementById('School').value;
+						var Major = document.getElementById('Major').value;
+						var Gender;
+						
+						var details = document.getElementById('FormDetails');			
+						if(document.getElementById('Male').checked){
+							var Gender = ' ' + Male;
+						}
+						if(document.getElementById('Female').checked){
+							var Gender = ' ' + Female;
+						}
+						
+						details.textContent = ' ' + firstName + ' ' + middleI + '.' + ' ' + lastName 
+											+ ' ' + Month + '/' + Day + '/' + Year + ' ' 
+											+ Gender + ' ' + School + ' ' + Major;
+					}
+			//---------------------------------------------------------------------
+		</script>
+	</body>
+
+</html>
