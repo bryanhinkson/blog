@@ -25,7 +25,7 @@ $('input[type="submit"]').on('click', function(e){
 			'<td>' + OrderID + '</td>' + 
 			'<td>' + product + '</td>' + 
 			'<td>' + description + '</td>' + 
-			'<td>' + price + '</td>' + 	
+			'<td>$' + price + '</td>' + 	
 			'<tr>');
 		
 		OrderID++;
