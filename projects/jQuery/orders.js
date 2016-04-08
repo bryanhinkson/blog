@@ -32,7 +32,7 @@ $('input[type="submit"]').on('click', function(e){
 		
 		//Calculates the total
 		Total += Number(price);
-		$('#Total').text(Total);	
+		$('#Total').text(Total.toFixed(2));	
 	}
 });
 
