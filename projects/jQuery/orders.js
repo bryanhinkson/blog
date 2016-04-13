@@ -13,11 +13,13 @@ $('input[type="submit"]').on('click', function(e){
 	var product = $('#productNum').val();
 	var description = $('#description').val();
 	var price = $('#price').val();
+    price=price.replace("$","");
+    price=Number(price).toFixed(2);
 	
 	if($.isNumeric(product) && $.isNumeric(price) && description != ''){
 	
 		removePreviousSuccess();
-		
+        
 		//Adds a row to the table //class="success" to make it green
 		$('table').append(
 			'<tr class="success">' + 
@@ -39,8 +41,15 @@ $('input[type="submit"]').on('click', function(e){
 //Removes the buttons and takes adjusts the Total
 $('table').on('click','.btn', function(e){
 	var price = e.target.parentNode.parentNode.lastChild.textContent;
+    price=price.replace("$","");
+    
+    console.assert(typeof price=="string","This is still a string we need to make sure it is a number to do math ops on it");
+    
 	e.target.closest('tr').remove();
-	Total -= Number(price);
+    
+	
+    Total -= Number(price);
+    Total=Total.toFixed(2);
 	$('#Total').text(Total);
 });
 
